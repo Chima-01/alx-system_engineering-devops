@@ -11,3 +11,5 @@ The command rm -r /tmp/my_first_directory removes the my_first_directory from tm
 The command cd - returns to the previous directory
 The command ls -la . .. reaveals all files in a current, working, root.
 The command file /tmp/iamafile gives the type of file.
+The command ln -s /bin/ls _ls_ is used to make a soft link;
+The command cp -u *.html copies all html files in the current directory.
