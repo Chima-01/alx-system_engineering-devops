@@ -1,0 +1,16 @@
+total 51
+drwx------ 2 u0_a283 u0_a283 3452 Mar 13 15:48 .
+drwx------ 6 u0_a283 u0_a283 3452 Mar 13 12:25 ..
+-rwx------ 1 u0_a283 u0_a283   32 Mar 13 13:03 0-hello_world
+-rwx------ 1 u0_a283 u0_a283   28 Mar 13 13:07 1-confused_smiley
+-rwx------ 1 u0_a283 u0_a283   28 Mar 13 13:13 2-hellofile
+-rwx------ 1 u0_a283 u0_a283   39 Mar 13 13:15 3-twofiles
+-rwx------ 1 u0_a283 u0_a283   29 Mar 13 13:19 4-lastlines
+-rwx------ 1 u0_a283 u0_a283   29 Mar 13 13:42 5-firstlines
+-rwx------ 1 u0_a283 u0_a283   35 Mar 13 15:37 6-third_line
+-rwx------ 1 u0_a283 u0_a283   72 Mar 13 15:44 7-file
+-rwx------ 1 u0_a283 u0_a283   36 Mar 13 15:47 8-cwd_state
+-rw------- 1 u0_a283 u0_a283   56 Mar 13 12:28 README.md
+-rw------- 1 u0_a283 u0_a283    0 Mar 13 15:46 food
+-rw------- 1 u0_a283 u0_a283   88 Mar 13 13:48 iacta
+-rw------- 1 u0_a283 u0_a283    0 Mar 13 15:48 ls_cwd_content
