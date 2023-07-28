@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
 #This script displays running pids
-ps -u
+ps auxf
