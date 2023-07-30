@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+# displays clock
+
+h=0
+m=1
+
+while (( h <= 12 ));
+do
+	echo "Hour: $h"
+
+	while (( m \< 60 ));
+	do
+		echo "$m"
+		((m++))
+	done
+	m=1
+	((h++))
+done
