@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+#display the file in the current directory
+
+for f in *
+do
+	echo "$f" | cut -d ' ' -f 2
+done
