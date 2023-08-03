@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+# This script shows all listening socket TCP/UPS connections
+netstat -ltup
