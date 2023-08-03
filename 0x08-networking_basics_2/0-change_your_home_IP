@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# This script configures an ip address of a particular network
+echo -e "127.0.0.2\tlocalhost" | tee /etc/hosts > /dev/null
+echo -e "8.8.8.8\tfacebook.com" | tee -a /etc/hosts > /dev/null
