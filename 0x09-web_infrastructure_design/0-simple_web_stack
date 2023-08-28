@@ -1,0 +1,34 @@
+# A simple web stack
+# web server(nginx), application server and database
+
+Link to image [https://imgur.com/eZkxN0l]
+
+What is a server
+	A server is a computer either hardware or software that provides functionality or perform tasks based on a sub-server 
+type or requirements.
+
+What is the role of the domain name
+Domain name allows the Supports the interactions of humans and websites.
+A domain ip is converted to a domain name for easy access and remembrance for humans.
+
+What type of DNS record www is in www.foobar.com
+WWW is a CNAME
+
+What is the role of the web server
+web server serves data upon request to the client.
+
+What is the role of the application server
+application server delivers dynamic content to web server upon request by the client.
+
+What is the role of the database
+The database stores and retrive data, recives request from application server search through and delivers the data and update itself in case of changes..
+
+What is the server using to communicate with the computer of the user requesting the website
+server is using a simple HTTP request system.
+
+You must be able to explain what the issues are with this infrastructure
+1.Single point of failure (spof): In this system webserver could be exposed to lots of casaulties with could result to breakdown of server.
+No back-up: if serves breaks dowwn web connection is lost
+2.As there only one active server users won't be able to access website during deployment of new codebase or updating of servers.
+3.As a result of no load-balancer sever is not able to handle high traffic and this would likely cost system to crash.
+4.System exposes client to cyber-attacks.

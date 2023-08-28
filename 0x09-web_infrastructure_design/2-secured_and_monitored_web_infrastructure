@@ -1,0 +1,55 @@
+# Implement a three server web infastructure
+# Added a web monitoring, firewall and ssl certification
+
+link to image [https://imgur.com/gWFMAw2]
+
+For every additional element, why you are adding it
+Added an ssl certificate verifiction system to verify website as client
+added A firewall to protect load-balamcer from cyber attcak
+added a monitoring system to monitor backend server
+
+What are firewalls for
+Firewalls are security rules implemented on web system to properly scruntized traffic coming in and out
+in a web system.
+They are implemented both in client side and server side.
+
+Why is the traffic served over HTTPS
+Traffics are served over https to ensure encrypted transmission of data across client and server on the internet.
+Implements an handshake connection between servers and client.
+
+What monitoring is used for
+Monitoring involves applying and analysing data and various metrics to check if a system, web server or database is functioning effectively.
+Monitoring also allows detection of faults early for easy troubleshoot.
+
+How the monitoring tool is collecting data
+Monitoring tool collects data through log analysis in this system log files are recived from server and tools reads and converts to a meaning information
+
+API's and integration
+Monitoring tools collects data from apis in server side
+
+SNMP(Simple Network management protocol)
+collects data from router, firewalls to calculate performance data on the webs
+
+Agent-Based Monitoring software for specific needs are embeded in the monitoring system.
+
+Explain what to do if you want to monitor your web server QPS
+Queries per second (QPS) this a metric used to measure the rate a system can process a query or requests
+
+Select monitoring
+pick are particular tool to monitor database
+
+Access the monitoring tool database and analyse the qps data
+Utilize data and uptimize server connection.
+
+Why terminating SSL at the load balancer level is an issue
+Backend serves recieves unencryted log exposing information to public if compromised
+Exposes load balancer to different cyber attacks since the it transmit to server is not encrypted.
+
+Why having only one MySQL server capable of accepting writes is an issue
+depends on which system being used they might be data loss when traffic high.
+single point of failure(SPOF) when there a failure in software the whole database will go down
+
+Why having servers with all the same components (database, web server and application server) might be a problem
+inefficiencient use of resource speed, optimazation are not handled in this syatem.
+Limited flexibility system doesn't give room for flexibility in case break down of a particular server to switch becomes a problem.
+Maintainance and repair will be more complex and time consuming.
