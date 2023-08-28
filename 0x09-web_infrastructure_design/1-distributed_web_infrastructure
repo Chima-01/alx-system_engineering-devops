@@ -1,0 +1,54 @@
+# Implement a two server infrasture to handle an incoming request of the contents of foobar.com
+
+Link to whiteboard image [https://imgur.com/0p1LXCx]
+
+In the whitebaord session we implemented two server infastructure, having twos instance of nginx web server
+with a load balance to handle server request.
+
+For every additional element, why you are adding it
+	A load balancer (HAproxy) was added to handle a sytematic distribution of request to backend server.
+This ensures effeciency, scalability and handle redistribution in cases of single point of failure (SPOF).
+Also a reverse proxy to prevent server from attack.
+
+What distribution algorithm your load balancer is configured with and how it works
+	Our Load balancer is configured with a Round Robin System.
+In this system Our load balancer directs incoming request to foobar.com evenly across the two servers available.
+when a server recieve a request, the other server receives the next incoming request, This gives room for simplicity in data retrival,
+prevents overload, and this algorithm exclude server rotation from a particular server in cases where the server develops an issue.
+
+is your load-balancer enabling an Active-Active or Active-Passive setup, explain the difference between both
+	NO, our load-balancer is neither maintaining an Active-Active nor active-passive setup this because we are having a single load-balancer
+all request of foobar.com would go through the single load-balancer setup. if it fails all connection is lost.
+
+active-active setup:
+	In active-active setup, multiple load-balancers are actively redistributing traffic across multiple servers simulataneously.
+This enhance effieciency, also develops the capacity of laod balancers to handle multiple traffics.
+
+active-passive setup:
+	In active-passive setup only one load-balancer is active while the others are idle, if then current active load balancer fails the passive takes over
+once the former active recovers it wait in line till the current active fails.
+
+How a database Primary-Replica (Master-Slave) cluster works
+A Database primary-Replica is a system in database configuration where an up to date replica of the master database is being maintained to a
+replica database. This replica database in a readonly mode.It reads from the master database at interval and copies the differences.
+In a case where master database fails the replica is promoted to be master database.
+Note: There Might be more than one replica database.
+
+What is the difference between the Primary node and the Replica node in regard to the application
+Primary Node is the master database, This the database thats sends the appropriate data to server upon client requeat.
+In a scenerio when a change as been made to primary node, the primary node updates it database and informs the repliacas that changes as been made.
+it has a Read-write permission.
+
+Replica node this simply a copy of primary node(Master node), it updates itself when changes as been made to primary node.
+it's given only a read permission, gets upgraded to a read write permission when promoted to primary node. This happens when master database fails.
+
+You must be able to explain what the issues are with this infrastructure
+SPOF Single Point of Failure:
+	In this structure no back-up is made on failure of the single load-balancer. connection is lost on failure
+
+Security issues (no firewall, no HTTPS)
+	No encryption of data and information, Sentive information could be easily gotten by hackers.
+
+No monitoring
+	No monitoring system is implemented to detect when a server or load-balancer is having issues this could cause a potential breakdown to web serves.
+Could also take quite long to fix issue because unknown reason of server breakdown during trouble shooting.
