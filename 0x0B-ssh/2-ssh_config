@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+# configure ssh file
+
+config="Host 54.87.178.219\n
+	IdentityFile ~/.ssh/school\n
+	PasswordAuthentication no"
+
+echo -e "$config" > ~/.ssh/config
+chmod 600 ~/.ssh/config
