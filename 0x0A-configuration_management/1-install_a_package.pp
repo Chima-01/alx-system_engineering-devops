@@ -1,6 +1,10 @@
-# puppet manifest, install flask from pip3
+# puppet manifest, install flask with pip3
+package { 'python3-pip':
+  ensure => 'installed',
+}
 
-exec { 'install python packages':
-  command  => 'pip3 install flask',
-  path     => ['/usr/bin/'],
+package { 'flask':
+  ensure   => '2.1.0',
+  provider => 'pip3',
+  require  => Package['python3-pip'],
 }
