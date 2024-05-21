@@ -1,7 +1,7 @@
-# sing Puppet, install flask from pip3
+# puppet manifest, install flask from pip3
 
 package { 'pip':
-  ensure  => 'installed',
+  ensure   => 'installed',
 }
 
 exec { 'flask':
