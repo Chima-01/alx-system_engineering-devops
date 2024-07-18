@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+# script to perform error 404
+redirect="server_name _;\n\trewrite ^\/redirect_me https:\/\/www.youtube.com permanent;\n\terror_page 404 \/404.html;"
+sudo apt -y update
+sudo apt -y install nginx
+echo 'Hello World!' | sudo tee /var/www/html/index.html
+echo -e "Ceci n'est pas une page\n" > /var/www/html/404.html
+sed -i "s/server_name _;/$redirect/" /etc/nginx/sites-available/default
+service nginx restart
