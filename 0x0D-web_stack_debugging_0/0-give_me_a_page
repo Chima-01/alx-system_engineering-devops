@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+# A script  Apache to run on the container and to return a page
+# containing Hello Holberton when querying the root of it.
+sudo apt -y update
+sudo apt -y install apache2
+sed -i "s/<VirtualHost[[:space:]]*:80>/<VirtualHost *:8080>/" /etc/apache2/sites-available/000-default.conf
+sed -i "s/Listen 80/Listen 8080/" /etc/apache2/ports.conf
+echo "Hello Holberton" | tee /var/www/html/index.html
+service apache2 start
