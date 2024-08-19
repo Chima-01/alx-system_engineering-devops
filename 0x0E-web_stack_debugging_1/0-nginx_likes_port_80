@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 # script to install and restart nginx
 
+sudo apt-get purge nginx
 apt-get -y update
 apt-get -y install nginx
-service nginx restart
+sudo service nginx start
