@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# make nginx run on port 80
+cp /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
+sudo service nginx restart
+kill -9 "$(cat /run/nginx.pid)"
