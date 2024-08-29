@@ -1,5 +1,7 @@
 # Post Mortem Report
 
+![panic mode](panic.gif)
+
 ## Incident Summary:
 A server failure issue was noticed, resulting from the exhaustion of the server disk space. This led to the server becoming inaccessible to clients.
 
