@@ -17,7 +17,7 @@ if __name__ == "__main__":
     username = data.get('name')
     task_done = [task['title'] for task in user_todos if task['completed']]
 
-    print(f'Employee {username} is done with tasks ({len(task_done)}/\
+    print(f'Employee {username} is done with tasks({len(task_done)}/\
 {len(user_todos)}):')
 
     for task in task_done:
